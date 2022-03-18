@@ -1,5 +1,13 @@
 const api = "e8e355cfc1e43c33c5d30fc66fd9e5bf";
 
+const iconImg = document.getElementById("weather-icon");
+const loc = document.querySelector("#location");
+const tempC = document.querySelector(".c");
+const tempF = document.querySelector(".f");
+const desc = document.querySelector(".desc");
+const sunriseDOM = document.querySelector(".sunrise");
+const sunsetDOM = document.querySelector(".sunset");
+
 window.addEventListener("load", () => {
   let long;
   let lat;
@@ -26,15 +34,15 @@ window.addEventListener("load", () => {
           //converting epoch time to gmt
           const sunriseGMT = new Date(sunrise * 1000);
           const sunsetGMT = new Date(sunset * 1000);
+
+          iconImg.src = iconUrl;
+          loc.textContent = `${place}`;
+          desc.textContent = `${description}`;
+          tempC.textContent = `${temp.toFixed(2)}`;
+          tempF.textContent = `${fahrenheit.toFixed(2)}`;
+          sunriseDOM.textContent = `${sunriseGMT.toLocaleDateString()}, ${sunriseGMT.toLocaleTimeString()}`;
+          sunsetDOM.textContent = `${sunsetGMT.toLocaleDateString()}, ${sunsetGMT.toLocaleTimeString()}`;
         });
     });
   }
 });
-
-const iconImg = document.getElementById("weather-icon");
-const loc = document.querySelector("#location");
-const tempC = document.querySelector(".c");
-const tempF = document.querySelector(".f");
-const desc = document.querySelector(".desc");
-const sunriseDOM = document.querySelector(".sunrise");
-const sunsetDOM = document.querySelector(".sunset");
