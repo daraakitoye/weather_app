@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lora", serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: #99c3ff;
+  background-image: radial-gradient(
+      at 69% 78%,
+      hsla(215, 85%, 62%, 1) 0,
+      transparent 46%
+    ),
+    radial-gradient(at 78% 24%, hsla(42, 68%, 76%, 1) 0, transparent 49%),
+    radial-gradient(at 38% 92%, hsla(230, 62%, 77%, 1) 0, transparent 59%),
+    radial-gradient(at 22% 67%, hsla(237, 80%, 69%, 1) 0, transparent 45%),
+    radial-gradient(at 28% 43%, hsla(120, 96%, 79%, 1) 0, transparent 54%),
+    radial-gradient(at 77% 48%, hsla(147, 61%, 79%, 1) 0, transparent 57%),
+    radial-gradient(at 27% 58%, hsla(334, 72%, 60%, 1) 0, transparent 42%);
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  font-size: 1.5rem;
+}
+
+#location {
+  font-size: 3rem;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.desc {
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+
+.circle {
+  background-color: black;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  margin: 0 15px;
+}
